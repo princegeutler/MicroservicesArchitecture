@@ -1,0 +1,14 @@
+Gartner Article #1 Prince Geutler 
+
+Real life example of Micro-Service, Mini-service and Macro Service (Online Store)
+
+Macro Service -> Placing an order and putting new customers on a mailing list is all done in the same process. If placing an order fails then putting a new customer or a potential new customer on a mailing list will also fail subsequently. 
+
+Mini-Service -> Whenever a customer places an order, the place-order api forwards the customers information to the api that handles the mailing list. If the place-order api fails, perhaps the engineering team can make a different api/process to forward customer information to the mailing-list api. 
+
+Micro-Service -> The place-order api has no interaction with the mailing list api. Both apis receive their input separately from each other. If the place-order api fails, operation of the mailing-list api will be unaffected.  I would assume if  a customer order only gets placed on a mailing list whenever an order is successfully placed there would be another micro-service that monitors the completion of the place-order api and then initiates the mailing-list api. 
+
+Additional thoughts:
+I would love to see some case studies as to when companies decided against adopting microservices. 
+This is my first time hearing about containers, looking forward to learning more about them! 
+https://cloud.google.com/learn/what-are-containers
